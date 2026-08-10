@@ -1,0 +1,437 @@
+@charset "UTF-8";
+
+:root {
+    /* ==============================
+       CORES PRINCIPAIS
+       ============================== */
+
+    --verde-floresta: #243B20;
+    --verde-oliva: #66723A;
+
+    /* ==============================
+       DOURADOS
+       ============================== */
+
+    --dourado: #B58A32;
+    --dourado-claro: #D6B66A;
+
+    /* ==============================
+       FUNDOS
+       ============================== */
+
+    --creme: #F4E9D2;
+    --marfim: #FBF7ED;
+
+    /* ==============================
+       TONS TERROSOS
+       ============================== */
+
+    --marrom-madeira: #684B2C;
+    --marrom-escuro: #30271E;
+
+    /* ==============================
+       CORES DE INTERFACE
+       ============================== */
+
+    --branco: #FFFFFF;
+    --borda: #D8C69B;
+
+    /* ==============================
+       ESTADOS
+       ============================== */
+
+    --hover: #8E6B28;
+    --sucesso: #526B3A;
+}
+/* ==========================================================================
+   1. RESET E VARIÁVEIS GERAIS (MOBILE FIRST)
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Impede que padding e bordas estourem a largura */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--creme);
+  line-height: 1.5em; 
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Centraliza o site em telas muito largas */
+}
+
+/* ==========================================================================
+   2. HEADER E NAVEGAÇÃO PRINCIPAL
+   ========================================================================== */
+.container > header {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header img {
+  width: 100%;
+  max-width: 300px;
+  height: auto; /* Mantém a proporção correta da imagem */
+  padding: 20px;
+}
+header h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:var(--dourado);
+    padding: 20px;
+    font-size: 3em;
+    text-shadow: 0px 0px 3px var(--verde-floresta);
+
+
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  margin: 10px 0;
+}
+
+nav ul li a {
+  display: inline-block; /* Necessário para aplicar padding/border-radius no link */
+  text-decoration: none;
+  color: var(--dourado);
+  font-weight: bold; 
+  padding: 8px 16px;
+  transition: all 0.3s ease; /* Transição ágil de 0.3s */
+  border-radius: 5px; 
+}
+
+nav ul li a:hover {
+  background-color: var(--dourado);
+  color: var(--creme); 
+}
+
+/* ==========================================================================
+   3. CONTEÚDO PRINCIPAL (MAIN)
+   ========================================================================== */
+main {
+  width: 90%; 
+  margin: 0 auto; 
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Organiza os blocos sem depender de margens manuais */
+}
+
+.nav-main {
+  padding: 20px; 
+  border: 1px solid var(--borda);
+  background-color: var(--marfim); 
+  border-radius: 8px; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave e moderna */
+}
+
+.nav-main ul {
+  list-style: none;
+}
+
+.nav-main ul li {
+  margin: 10px 0; 
+}
+
+.nav-main ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--verde-floresta);
+  font-weight: bold; 
+  padding: 8px 16px;
+  transition: all 0.3s ease; 
+  border-radius: 5px; 
+}
+
+.nav-main ul li a:hover {
+  background-color: var(--sucesso); 
+}
+
+.principal {
+  padding: 20px; 
+  border: 1px solid var(--borda);
+  background-color: var(--marfim); 
+  border-radius: 8px; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* ==========================================================================
+   4. TIPOGRAFIA E SEÇÕES
+   ========================================================================== */
+section h2 {
+  color: var(--verde-floresta);
+  font-size: 1.75em; 
+  padding: 15px 0; 
+  font-family: Georgia, 'Times New Roman', Times, serif; 
+}
+
+section h3 {
+  color: var(--verde-oliva);
+  font-size: 1.3em;
+  padding: 15px 0;
+  font-family: Georgia, 'Times New Roman', Times, serif; 
+}
+section h4{
+    color: var(--sucesso);
+    font-size: 1em;
+    padding: 15px 0;
+}
+
+section p {
+  text-align: justify; 
+  text-indent: 20px; 
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+section ul{
+    padding: 15px 40px;
+}
+
+/* ==========================================================================
+   5. BOTÃO TOPO E RODAPÉ
+   ========================================================================== */
+main #top {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--sucesso);
+  margin: 20px 0; 
+}
+
+main #top span {
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+main #top span:hover {
+  background-color: var(--hover);
+  border-radius: 50px;
+  color: white;
+}
+
+footer {
+  margin: 40px auto; 
+}
+
+footer p {
+  font-size: 0.90em; 
+  color: #666; 
+}
+
+footer img {
+  width: 100%;
+  max-width: 200px;
+  height: auto; 
+}
+
+/* ==========================================================================
+   2. TELAS PEQUENAS (min-width: 500px até max-width: 768px)
+   ========================================================================== */
+@media (min-width: 500px) and (max-width: 768px) {
+  
+  /* Imagem no topo permanece centralizada */
+  .container > header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Menu Principal fica lado a lado a partir de 500px */
+  nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+}
+
+
+/* ==========================================================================
+   3. TABLETS (min-width: 768px até max-width: 992px)
+   ========================================================================== */
+@media (min-width: 768px) and (max-width: 992px) {
+  
+  /* Imagem permanece centralizada */
+  .container > header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  /* Menu secundário (.nav-main) fica na horizontal */
+  .nav-main ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .nav-main ul li {
+    margin: 0;
+  }
+
+  .principal {
+    padding: 30px 40px;
+  }
+
+  section h2 {
+    font-size: 2em;
+  }
+
+  section h3 {
+    font-size: 1.5em;
+  }
+}
+
+
+/* ==========================================================================
+   4. TELAS GRANDES (min-width: 992px até max-width: 1200px)
+   ========================================================================== */
+@media (min-width: 992px) and (max-width: 1200px) {
+
+  /* Logo centralizada no topo */
+  .container > header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  /* Grid com Barra Lateral (Sidebar) + Conteúdo */
+  main {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    align-items: start;
+    gap: 25px;
+  }
+
+  .nav-main {
+    text-align: left;
+  }
+
+  .nav-main ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-main ul li {
+    margin: 0;
+    width: 100%;
+  }
+
+  .nav-main ul li a {
+    display: block;
+    width: 100%;
+  }
+
+  .principal h2, h3{
+    text-align: center;
+    padding: 30px 40px;
+  }
+   .principal p{
+    text-align: justify;
+    padding: 30px 40px;
+  }
+
+  main #top {
+    grid-column: 1 / -1;
+  }
+}
+
+
+/* ==========================================================================
+   5. TELAS EXTRA GRANDES (min-width: 1200px)
+   ========================================================================== */
+@media (min-width: 1200px) {
+
+  .container > header {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    align-items: start;
+    gap: 30px;
+  }
+
+  .nav-main {
+    text-align: left;
+  }
+
+  .nav-main ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-main ul li {
+    margin: 0;
+    width: 100%;
+  }
+
+  .nav-main ul li a {
+    display:flex ;
+    width: 100%;
+  }
+
+  .principal {
+    text-align: left;
+    padding: 40px;
+  }
+
+  main #top {
+    grid-column: 1 / -1;
+  }
+  section h2, h3{
+    text-align: center;
+  }
+  section p{
+    text-align: justify;
+  }
+}
