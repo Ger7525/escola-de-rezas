@@ -282,10 +282,14 @@ footer img {
 
   /* Menu secundário (.nav-main) fica na horizontal */
   .nav-main ul {
-    display: flex;
+   /* display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 15px;*/
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
   }
 
   .nav-main ul li {
@@ -330,20 +334,22 @@ footer img {
 
   /* Grid com Barra Lateral (Sidebar) + Conteúdo */
   main {
-    display: grid;
+   /* display: grid;
     grid-template-columns: 260px 1fr;
     align-items: start;
-    gap: 25px;
+    gap: 25px;*/
   }
 
   .nav-main {
-    text-align: left;
+    text-align: center;
+    
   }
 
   .nav-main ul {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    display:flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
   }
 
   .nav-main ul li {
