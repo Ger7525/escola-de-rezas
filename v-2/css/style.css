@@ -1,0 +1,278 @@
+@charset "UTF-8";
+
+:root {
+    /* ==============================
+       CORES PRINCIPAIS
+       ============================== */
+    --verde-floresta: #243B20;
+    --verde-oliva: #66723A;
+
+    /* ==============================
+       DOURADOS
+       ============================== */
+    --dourado: #B58A32;
+    --dourado-claro: #D6B66A;
+
+    /* ==============================
+       FUNDOS
+       ============================== */
+    --creme: #F4E9D2;
+    --marfim: #FBF7ED;
+
+    /* ==============================
+       TONS TERROSOS
+       ============================== */
+    --marrom-madeira: #684B2C;
+    --marrom-escuro: #30271E;
+
+    /* ==============================
+       CORES DE INTERFACE
+       ============================== */
+    --branco: #FFFFFF;
+    --borda: #D8C69B;
+
+    /* ==============================
+       ESTADOS
+       ============================== */
+    --hover: #8E6B28;
+    --sucesso: #526B3A;
+
+    /* Tipografias */
+    --font-titulo-raiz: 'Cinzel Decorative', 'Cinzel', serif;
+    --font-corpo-raiz: 'Lora', Georgia, serif;
+    --font-titulo-devocional: 'Cormorant Garamond', serif;
+    --font-corpo-devocional: 'Merriweather', Georgia, serif;
+    --font-titulo-cordel: 'Pirata One', cursive;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background-color: var(--creme);
+   font-family: var(--font-corpo-raiz);
+   font-size: 1em;
+   line-height: 1.8em;
+}
+
+/* Cabeçalho */
+header {
+   padding: 20px;
+}
+
+header #nav-header ul {
+   display: flex;
+   gap: 10px;
+   flex-flow: row wrap;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+header #nav-header a {
+   color: var(--dourado-claro);
+   font-weight: bold;
+   padding: 8px 16px;
+   border-radius: 5px;
+   transition: all 0.3s ease;
+}
+
+header #nav-header a:hover {
+   background-color: var(--dourado-claro);
+   color: var(--marfim);
+}
+
+header #nav-header a:active {
+   color: var(--creme);
+}
+
+header #logo {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 20px;
+}
+
+header #logo img {
+   width: 250px;
+}
+
+/* Navegação principal da página */
+#nav-menu {
+   background-color: var(--marfim);
+   border: 1px solid var(--borda);
+   box-shadow: 0px 0px 3px var(--dourado-claro);
+   border-radius: 8px;
+   margin: 0 20px;
+}
+
+#nav-menu ul {
+   display: flex;
+   gap: 10px;
+   flex-flow: row wrap;
+   justify-content: space-evenly;
+   align-items: center;
+   padding: 10px;
+}
+
+#nav-menu a {
+   color: var(--verde-floresta);
+   font-weight: bold;
+   padding: 5px;
+   border-radius: 5px;
+   transition: background 0.3s, color 0.8s;
+}
+
+#nav-menu a:hover {
+   background-color: var(--verde-floresta);
+   color: var(--marfim);
+}
+
+#nav-menu a:active {
+   color: var(--dourado);
+   background-color: var(--dourado-claro);
+}
+
+/* Conteúdo principal */
+#container {
+   margin: 20px;
+   display: flex;
+   gap: 20px;
+   flex-flow: column nowrap;
+   justify-content: center;
+   align-items: center;
+}
+
+.texto {
+   background-color: var(--marfim);
+   border: 1px solid var(--borda);
+   box-shadow: 0px 0px 3px var(--dourado-claro);
+   border-radius: 8px;
+   width: 100%;
+}
+
+.texto .lista {
+   background-color: var(--branco);
+   margin: 0 20px;
+   box-shadow: 1px 1px 3px var(--borda);
+}
+
+.texto .lista ul {
+   padding: 20px;
+   line-height: 1.8em;
+   list-style: circle;
+   color: var(--marrom-madeira);
+   font-style: italic;
+   font-family: var(--font-corpo-devocional);
+}
+
+/* Títulos h3 específicos dentro de blocos de texto alinhados à esquerda */
+.texto h3 {
+   text-align: left;
+   padding: 15px 20px 5px 20px;
+}
+
+/* Botão Topo corrigido (área do link aplicada corretamente) */
+.topo {
+   padding: 20px;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+}
+
+.topo span {
+   color: var(--verde-oliva);
+   transition: all 0.3s;
+}
+
+.topo:hover span {
+   color: var(--verde-floresta);
+}
+
+.topo:active span {
+   color: var(--dourado-claro);
+}
+
+/* Configurações gerais */
+h1, h2, h3 {
+   padding: 20px;
+   color: var(--verde-floresta);
+   text-align: center;
+   text-shadow: 1px 1px 1px #b5893282;
+   font-family: var(--font-titulo-devocional);
+}
+
+p {
+   padding: 20px;
+   text-align: justify;
+   text-indent: 15px;
+   color: var(--verde-oliva);
+}
+
+ul {
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+}
+
+/* Rodapé */
+footer {
+   background-color: var(--verde-floresta);
+   display: flex;
+   flex-flow: column nowrap;
+   justify-content: center;
+   align-items: center;
+   border-top: 1px solid var(--borda);
+   box-shadow: 0px 0px 3px var(--dourado-claro);
+   padding: 20px 0;
+}
+
+footer p {
+   text-align: center;
+   font-size: 0.8em;
+   color: var(--creme);
+   padding: 10px;
+}
+
+#img-footer img {
+   width: 200px;
+}
+
+/* Configurações especiais */
+body #destaque {
+   color: var(--marfim);
+   background-color: var(--dourado-claro);
+}
+
+/* Para telas maiores (tablets e desktops) */
+@media screen and (min-width: 768px) {
+   header #nav-header ul {
+      justify-content: flex-end;
+   }
+   #nav-menu ul {
+      justify-content: space-around;
+   }
+    #container {
+      margin: 20px auto;
+      width: 100%;
+      max-width: 600px; /* Melhorado para usar max-width */
+   }
+}
+
+@media screen and (min-width: 992px) {
+   header #logo img {
+      width: 350px;
+   }
+   #container {
+      margin: 20px auto;
+      width: 100%;
+      max-width: 800px; /* Melhorado para usar max-width */
+   }
+   .texto {
+      width: 100%;
+   }
+}
